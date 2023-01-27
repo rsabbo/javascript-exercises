@@ -12,12 +12,17 @@ repeatString2("hey",3)
 */
 
 // simpler version with string method
-const repeatString = function () {
-  let string = "hey";
-  return string.repeat(3);
+const number = Math.floor(Math.random() * 1000);
+const repeatString = function (string, x) {
+  if (x < 0) {
+    return "ERROR";
+  } else {
+    const result = string.repeat(x);
+    return result;
+  }
 };
 
-repeatString();
+repeatString("", 10);
 
 // Do not edit below this line
 module.exports = repeatString;
